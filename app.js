@@ -6,7 +6,7 @@ const connectDB =require("./db/connect")
 require("dotenv").config()
 
 const port = 3000
-// app.use(express.json());
+app.use(express.json());
 app.use("/api/v1/tasks", taskRoute);
 
 // connect DB
