@@ -16,16 +16,15 @@ const showTasks = async () => {
         // タスクを出力
         const allTasks = tasks.map((task) => {
             const { completed, _id, name } = task;
-            console.log(name);
 
-            return `<div class="single-task">
+            return `<div class="single-task ${completed && "task-completed"}">
             <h5>
               <span><i class="fas fa-check-circle"></i></span>
               ${name}
             </h5>
             <div class="task-links">
               <!-- 編集リンク -->
-              <a href="#" class="edit-link">
+              <a href="edit.html?id=${_id}" class="edit-link">
                 <i class="fas fa-edit"></i>
               </a>
               <!-- ゴミ箱ボタン -->
